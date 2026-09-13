@@ -6,7 +6,7 @@ import { X } from 'lucide-react';
 
 const picker = ({ added, setAdded }) => {
 
-    // Remove one technology
+
     const handleRemove = (el) => {
 
         const restStack = added.filter(
@@ -18,7 +18,6 @@ const picker = ({ added, setAdded }) => {
     };
 
 
-    // Remove all technologies
     const handleRemoveAll = () => {
 
         setAdded([]);
@@ -30,7 +29,7 @@ const picker = ({ added, setAdded }) => {
 
         <div className="w-[300px] border-2 border-gray-700 rounded-2xl p-4">
 
-            {/* Your Stack + Remove All */}
+         
             <div className="flex justify-between items-center">
 
                 <h1 className="text-2xl font-bold text-black">
@@ -51,7 +50,7 @@ const picker = ({ added, setAdded }) => {
             </div>
 
 
-            {/* Technology Count */}
+        
             <p className="text-gray-500 mb-4">
 
                 {added.length}
@@ -64,10 +63,10 @@ const picker = ({ added, setAdded }) => {
             </p>
 
 
-            {/* Empty State */}
+            
             {added.length === 0 && (
 
-                <div className="h-[150px] border-2 border-dashed border-black flex items-center justify-center rounded-2xl text-gray-500">
+                <div className="h-[100px] border-2 border-dashed border-black flex items-center justify-center rounded-2xl text-gray-500">
 
                     Your Stack is Empty
 
@@ -76,7 +75,7 @@ const picker = ({ added, setAdded }) => {
             )}
 
 
-            {/* Selected Technologies */}
+           
             {added.map((el) => (
 
                 <div
@@ -84,7 +83,7 @@ const picker = ({ added, setAdded }) => {
                     className="h-[65px] w-full flex justify-between p-4 items-center bg-white border-black border-2 my-2 rounded-2xl"
                 >
 
-                    {/* Technology Info */}
+                
                     <div className="flex items-center gap-3">
 
                         <img
@@ -108,7 +107,7 @@ const picker = ({ added, setAdded }) => {
                     </div>
 
 
-                    {/* Remove One */}
+                 
                     <span
                         onClick={() => handleRemove(el)}
                         className="cursor-pointer"
