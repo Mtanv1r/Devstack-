@@ -26,10 +26,6 @@ const card = ({ el, added, setAdded }) => {
                         alt=""
                         className="h-[30px] w-[30px]"
                     />
-
-                    {/* <button className="btn btn-outline btn-success">
-                        {el.badge}
-                    </button> */}
                     <div className="h-10 w-20 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
                         {el.badge}
                     </div>
@@ -56,13 +52,20 @@ const card = ({ el, added, setAdded }) => {
                 {/* Category + Difficulty */}
                 <div className="flex justify-between gap-3">
 
-                    <button className="btn btn-neutral btn-outline">
+                    {/* <button className="btn btn-neutral btn-outline">
                         {el.category}
-                    </button>
+                    </button> */}
+                    
+                         <div className="h-13 w-28 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
+                        {el.category}
+                    </div>
 
-                    <button className="btn btn-neutral btn-outline">
+                    {/* <button className="btn btn-neutral btn-outline">
                         {el.difficulty}
-                    </button>
+                    </button> */}
+                       <div className="h-13  w-28 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
+                        {el.difficulty}
+                    </div>
 
                 </div>
 
