@@ -9,7 +9,7 @@ const cardcontainer = ({dataPromise,added,setAdded}) => {
     return (
 
         <div className="container mx-auto  grid grid-cols-4 gap-2 bg-white">
-            <div className="col-span-3 grid grid-cols-3 gap-3">
+            <div className="col-span-3 grid grid-cols-3 gap-5 items-center">
                 {data.map((el,idx)=><Card el={el} key={idx} added={added} setAdded={setAdded}/>)}
             </div>
              <div className="col-span-1">

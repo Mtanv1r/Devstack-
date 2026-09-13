@@ -27,9 +27,12 @@ const card = ({ el, added, setAdded }) => {
                         className="h-[30px] w-[30px]"
                     />
 
-                    <button className="btn btn-outline btn-success">
+                    {/* <button className="btn btn-outline btn-success">
                         {el.badge}
-                    </button>
+                    </button> */}
+                    <div className="h-10 w-20 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
+                        {el.badge}
+                    </div>
 
                 </div>
 
