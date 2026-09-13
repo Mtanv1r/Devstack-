@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../assets/logo-text.png'
 const footer = () => {
     return (
-        <div className="container mx-auto bg-white min-h-[350px]">
+        <div className="container mx-auto bg-white min-h-[350px] mt-20  ">
             <div className="flex flex-col justify-evenly items-center text-black   ">
                 <div className="flex gap-43 items-center py-10 border-b border-black">
                     <div className="flex flex-col gap-3">
@@ -33,7 +33,7 @@ const footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="flex justify-evenly items-center text-black mt-30 text-[22px] ">
+            <div className="flex justify-evenly items-center text-black mt-30 text-[22px] my-20 ">
                 <h1 className="text-gray-400">@devstack.allrightreserved</h1>
                 <div className="flex gap-5 ">
                     <h1 className="text-gray-400">privacy</h1>
