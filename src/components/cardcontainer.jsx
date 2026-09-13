@@ -2,7 +2,8 @@ import React, { use, useState } from 'react';
 import Card from './card';
 import Picker from './picker';
 
-const cardcontainer = ({dataPromise,added,setAdded}) => {
+const cardcontainer = ({dataPromise,added,setAdded}) => {\
+    //final touch 
 
     const data=use(dataPromise);
     // logical operation
