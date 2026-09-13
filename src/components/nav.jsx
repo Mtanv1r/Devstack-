@@ -4,8 +4,7 @@ import logo from '../assets/logo-text.png'
 const nav = () => {
     return (
 
-            <div className="container mx-auto
-            ">
+            <div className="sticky top-0 z-50 bg-white shadow-md " >
       <div className="flex justify-between md:justify-evenly items-center gap-3 bg-white text-black w-full h-16 px-4 py-3 top-0 shadow-md sticky z-50">
         
         <div className="md:hidden text-3xl">
