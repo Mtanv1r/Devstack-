@@ -41,7 +41,7 @@ const card = ({ el, added, setAdded }) => {
                 </div>
 
 
-                {/* Description */}
+            
                 <div>
                     <p>
                         {el.description}
@@ -49,20 +49,14 @@ const card = ({ el, added, setAdded }) => {
                 </div>
 
 
-                {/* Category + Difficulty */}
+             
                 <div className="flex justify-between gap-3">
 
-                    {/* <button className="btn btn-neutral btn-outline">
-                        {el.category}
-                    </button> */}
+                 
                     
                          <div className="h-13 w-28 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
                         {el.category}
                     </div>
-
-                    {/* <button className="btn btn-neutral btn-outline">
-                        {el.difficulty}
-                    </button> */}
                        <div className="h-13  w-28 bg-white font-bold border-2 border-black flex items-center rounded-2xl p-2">
                         {el.difficulty}
                     </div>
@@ -70,7 +64,7 @@ const card = ({ el, added, setAdded }) => {
                 </div>
 
 
-                {/* Rating */}
+              
                 <div>
 
                     <div className="flex items-center justify-evenly bg-gray-400 w-15 border-black border-2">
@@ -84,7 +78,7 @@ const card = ({ el, added, setAdded }) => {
                 </div>
 
 
-                {/* Add to Stack Button */}
+            
                 <button
                     className={`btn btn-wide flex items-center justify-center gap-1 bg-black text-white ${
                         isAdded
@@ -92,16 +86,37 @@ const card = ({ el, added, setAdded }) => {
                             : ""
                     }`}
 
-                    disabled={isAdded}
+                    // disabled={isAdded}
 
                     onClick={() => {
+                      
 
+                        if(isAdded){
+             toast.warn(`${el.id} is alread in stack`, {
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
+                              return
+                        }
+                        
                         toast.success(`${el.id} is selected`, {
-                            position: "top-center",
-                            autoClose: 5000,
-                            theme: "colored",
-                            transition: Bounce,
-                        });
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
 
                         setAdded([...added, el]);
 

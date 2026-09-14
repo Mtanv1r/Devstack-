@@ -2,6 +2,7 @@
 import React from 'react';
 
 import { X } from 'lucide-react';
+import { Bounce, toast } from 'react-toastify';
 
 
 const picker = ({ added, setAdded }) => {
@@ -12,6 +13,17 @@ const picker = ({ added, setAdded }) => {
         const restStack = added.filter(
             item => item.id !== el.id
         );
+        toast.error(`${el.name} removed from your stack`, {
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
 
         setAdded(restStack);
 
@@ -19,7 +31,18 @@ const picker = ({ added, setAdded }) => {
 
 
     const handleRemoveAll = () => {
-
+        //  toast.info("All technologies removed from your stack");
+        toast.error(`All stack is removed from your stack`, {
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Bounce,
+});
         setAdded([]);
 
     };
